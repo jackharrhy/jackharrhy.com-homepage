@@ -18,8 +18,8 @@ app.get('*', function(req, res){
 var io = require('socket.io').listen(app.listen(4000));
 
 io.sockets.on('connection', function (socket) {
-	socket.emit('message', { message: 'welcome to the chat' });
-	socket.on('send', function (data) {
-		io.sockets.emit('message', data);
+	socket.emit('init', true);
+	socket.on('thing', function (data) {
+		//io.sockets.emit('thing', data);
 	});
 });

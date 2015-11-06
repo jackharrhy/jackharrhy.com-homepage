@@ -1,21 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Arvo);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
 	margin: 0;
-	font-family: 'Arvo', serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 header {
+	position: absolute;
 	margin: 0 auto;
-	width: 12em;
-	height: 6.5em;
-
-	font-size: 3em;
-	text-align: center;
-}
-header h1 {
-	margin: 0.5em 0 0 0;
-}
-header h2 {
-	margin: 0;
+	width: 100%;
+	background-color: #f4842b;
 }
