@@ -56,6 +56,12 @@ function loop() {
 }
 loop();
 
+// EASTER EGG
+cheet('c o o l d u c k p i c s', function() {
+	document.getElementById('wrap').style.display = 'none';
+	document.getElementById('coolduckpics').style.display = 'block';
+});
+
 // SOCKET
 var io = socket();
 var socketConnection = false;

@@ -25,3 +25,10 @@ h2 {
 	width: 100%;
 	height: 100px;
 }
+
+#coolduckpics {
+	margin: 0 auto;
+	width: 800px;
+	height: 799px;
+	display: none;
+}
