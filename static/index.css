@@ -2,12 +2,26 @@
 
 body {
 	margin: 0;
+	background-color: #f9f9f9;
 	font-family: 'Open Sans', sans-serif;
 }
 
-header {
-	position: absolute;
-	margin: 0 auto;
+h1, h2, a {
+	text-align: center;
+	text-decoration: none;
+	color: #f2a876;
+}
+
+h1 {
+	margin: 0.2em;
+	font-size: 4em;
+}
+h2 {
+	margin: 0 0 1em 0;
+	font-size: 2em;
+}
+
+#wave {
 	width: 100%;
-	background-color: #f4842b;
+	height: 100px;
 }
