@@ -6,6 +6,11 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+#header {
+	width: 400px;
+	margin: 0 auto;
+}
+
 h1, h2, a {
 	text-align: center;
 	text-decoration: none;
