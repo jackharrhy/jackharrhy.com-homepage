@@ -4,7 +4,8 @@ var c = canvas.getContext('2d');
 var cursorX;
 
 document.onmousemove = function(e) {
-	cursorX = e.pageX;
+	cursorX = e.pageX / 2;
+	// ^ crude fix right here :(
 }
 
 canvas.height = 100;
@@ -16,7 +17,7 @@ function loop() {
 
 	c.clearRect(0,0,canvas.width,canvas.height);
 
-	for(var i=0; i<=window.innerWidth; i++) {
+	for(var i=0; i<=window.innerWidth/2; i++) {
 		c.fillStyle = 'rgba('+
 			String(Math.ceil(Math.sin(frame/4 + i/2)*100) + 155)+','+
 			String(Math.ceil(Math.cos(frame/5 + i/2.5)*100) + 155)+','+
@@ -33,7 +34,7 @@ function loop() {
 			}
 
 			c.fillRect(
-				i,
+				i * 2,
 				50 +
 					(Math.cos((frame+i)/60)*30)*
 					Math.sin((frame-i)/30)-
@@ -43,7 +44,7 @@ function loop() {
 
 		} else {
 			c.fillRect(
-				i,
+				i * 2,
 				50 +
 					(Math.cos((frame+i)/60)*30)*
 					Math.sin((frame-i)/30)+
