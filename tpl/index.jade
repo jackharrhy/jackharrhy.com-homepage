@@ -2,23 +2,34 @@ doctype
 html
 	head
 		title= "jackharrhy.com"
-		link(rel="stylesheet", href="/index.css")
+		link(rel="stylesheet", href="normalize.css")
+		link(rel="stylesheet", href="skeleton.css")
+		link(rel="stylesheet", href="homepage.css")
 
 	body
-		#wrap
-			#header
+		canvas#canvas
+		div.container
+			div.row
+				div(class="six columns")
+					p#h1 hi, i'm jack
 
-			#wave
-				canvas#canvas
+				div(class="six columns")
+					p#h2 i make stuff
 
-			#contact
-				a(href="mailto:jack@jackharrhy.com")
-					p jack@jackharrhy.com
+			div.row
+				div(class="twelve columns")
+					p #[a(mailto="jack@jackharrhy.com") email] | #[a(href="http://github.com/jackharrhy") github] | #[a(href="http://facebook.com/profile.php?id=100009973992618") facebook]
 
-			script(src='/socket.io/socket.io.js')
-			script(src='/divsugar.js')
-			script(src='/cheet.min.js')
-			script(src='/index.js')
+			div.row
+				div(class="twelve columns project-header")
+					p here are some of my projects
 
-		#coolduckpics
-			img(src="/coolduckpics.jpg")
+			each val, index in projects
+				a(href=val[2])
+					div(class="row project")
+						div(class="three columns project-title")
+							p= val[0]
+						div(class="nine columns project-desc")
+							p= val[1]
+
+		script(src='homepage.js')
