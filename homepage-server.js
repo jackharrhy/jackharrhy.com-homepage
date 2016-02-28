@@ -6,7 +6,6 @@ var lessMiddleware = require('less-middleware');
 app.use(lessMiddleware(__dirname + '/static'));
 app.use(express.static(__dirname + '/static'));
 
-app.set('views', __dirname + '/tpl');
 app.set('view engine', 'jade');
 app.engine('jade', require('jade').__express);
 
